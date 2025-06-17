@@ -9,8 +9,8 @@ from fastapi import FastAPI
 
 # 创建 FastAPI 实例 - 名字叫app, 
 # title 只是个标识，和身份验证无关
-app = FastAPI()
-app.title = "参数训练器"
+app = FastAPI(title = "参数训练器")
+
 
 
 
@@ -20,7 +20,10 @@ app.title = "参数训练器"
 
 # 声明 GET 接口，路径为 /v1/ping，只要别人在访问地址输入这个/v1/ping，就会执行下面的函数。
 # @app.get 相当于宏，给下面的函数做装饰，1对1关系
-@app.get("/v1/ping")
+# @app.get("/v1/ping")
+
+# 不想加入额外的后缀地址，就直接用"/"
+@app.get("/")
 async def ping():   # 异步函数，处理来自客户端的请求
     #如果想让一个函数执行一堆逻辑，就把这个函数当大函数，里面写一堆子函数即可。
     return{"msg":"pong"}    # 返回 JSON 响应，前端拿到 {"msg": "pong"} 即表示后端在线
