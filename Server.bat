@@ -41,11 +41,11 @@ REM uvicorn 是一个阻塞进程，会一直站着窗口直到 ctrl + c
 REM uvicorn app.app:app --host 127.0.0.1 --port 8000 --reload
 
 REM 这样写，就可以启动服务器后，直接走后面 cmd/c是命令执行完关闭窗口
-start cmd /c uvicorn app.app:app --host 127.0.0.1 --port 8000 --reload
+start cmd /c uvicorn app.app:app --host 127.0.0.1 --port 5334 --reload
 
 
 REM 打开后直接启动地址
-start http://127.0.0.1:8000/
+start http://127.0.0.1:5334/
 
 
 
