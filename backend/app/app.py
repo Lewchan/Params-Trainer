@@ -48,5 +48,5 @@ if __name__ == "__main__":
     #   host       => 0.0.0.0 监听全部网卡, 所有ip都可以访问，0.0.0.0 代表所有ip
     #   port       => 8000    默认端口
     #   reload     => 代码改动后自动重启（开发期必开）
-    uvicorn.run("app:app", host="0.0.0.0", port=5334, reload=True)    
+    uvicorn.run("app:app", host="0.0.0.0", port=8000, reload=True)    
 
